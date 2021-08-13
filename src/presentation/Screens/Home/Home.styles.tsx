@@ -24,13 +24,10 @@ export const Text = styled.Text`
   margin: 5px;
 `;
 
-<<<<<<< HEAD
 export const TouchCenter = styled.TouchableOpacity.attrs({
   activeOpacity: 0.6
 })``;
 
-=======
->>>>>>> 2a13b68fae3e559fed7a58423ff36ca2e38dfa84
 export const ContainerScroll = styled(LinearGradient).attrs({
   colors:['#000','#7F5DF0', '#000']
 })`
@@ -52,7 +49,6 @@ export const TitleList = styled.Text`
   margin-right: 5px;
 `
 
-<<<<<<< HEAD
 export const Scroll = styled.ScrollView``;
 
 export const ContainerModal = styled.View`
@@ -60,6 +56,3 @@ flex: 1;
 align-items: center;
 justify-content: center;
 `;
-=======
-export const Scroll = styled.ScrollView``;
->>>>>>> 2a13b68fae3e559fed7a58423ff36ca2e38dfa84
