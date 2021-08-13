@@ -1,20 +1,28 @@
 import React, { useContext } from 'react'
+<<<<<<< HEAD
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
+=======
+
+>>>>>>> 2a13b68fae3e559fed7a58423ff36ca2e38dfa84
 import { ActivityIndicator } from 'react-native'
 import { AuthContext } from '../src/contexts/auth'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { Home } from '../src/presentation/Screens/Home/Home'
+<<<<<<< HEAD
 import { Profile } from '../src/presentation/Screens/Profile/Profile'
 
+=======
+>>>>>>> 2a13b68fae3e559fed7a58423ff36ca2e38dfa84
 
 const Tab = createBottomTabNavigator()
 
 const Tabs = () => {
 
   const { user }: any = useContext(AuthContext)
+<<<<<<< HEAD
   if (user === null) {
     <><ActivityIndicator color="#000" size={50} /></>
   } else {
@@ -72,4 +80,19 @@ const styles = StyleSheet.create({
     elevation: 5
   }
 })
+=======
+  if(user === null){
+    <><ActivityIndicator color="#000" size={50} /></>
+  } else {
+
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Perfil" component={Home} />
+    </Tab.Navigator>
+  )
+}
+}
+
+>>>>>>> 2a13b68fae3e559fed7a58423ff36ca2e38dfa84
 export default Tabs

@@ -15,7 +15,10 @@
       "test-utils": ["./utils/test-utils"]
     }
   },
+<<<<<<< HEAD
   "types": ["jest", "styled-components-react-native"],
+=======
+>>>>>>> 2a13b68fae3e559fed7a58423ff36ca2e38dfa84
   "include": [
     "./setup.ts"
   ],
