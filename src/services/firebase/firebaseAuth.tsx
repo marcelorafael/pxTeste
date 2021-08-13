@@ -3,7 +3,7 @@ import firebase from './firebaseConnection';
 let check = false
 
 async function signInAuth(email, password) {
-  let data = {}
+  let data = null
   
   await firebase.auth().signInWithEmailAndPassword(email, password)
   .then(async (value) => {
@@ -21,6 +21,7 @@ async function signInAuth(email, password) {
     })
   })
   .catch(error => {
+    check = false
     if (error.code === 'auth/invalid-email') {
       alert('E-mail inválido!');
       return;
@@ -73,14 +74,15 @@ async function signUpAuth(email, password, name) {
     })
     .catch(error => {
       check = false
-      if (error.code === 'auth/email-already-in-use') {
-        alert('E-mail já está cadastrado')
-        return;
-      }
-      if (error.code === 'auth/weak-password') {
-        alert('Senha muito curta, mínimo 6 caracters')
-        return;
-      }
+      // if (error.code === 'auth/email-already-in-use') {
+      //   alert('E-mail já está cadastrado')
+      //   return;
+      // }
+      // if (error.code === 'auth/weak-password') {
+      //   alert('Senha muito curta, mínimo 6 caracters')
+      //   return;
+      // }
+      alert(error.code)
     })
   })
 

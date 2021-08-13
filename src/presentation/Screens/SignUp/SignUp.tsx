@@ -23,7 +23,7 @@ const SignUp: React.FC = ({ navigation }: any) => {
   
   return (
     <Container>
-      <Title>Login</Title>
+      <Title>Cadastrar</Title>
 
       <Input
         placeholder="Nome"
@@ -45,10 +45,6 @@ const SignUp: React.FC = ({ navigation }: any) => {
 
       <BtnLogin onPress={() => handleSubmit()}>
         <TextButton>{loadingAuth ? 'Carregando...' : 'Cadastrar'}</TextButton>
-      </BtnLogin>
-
-      <BtnLogin onPress={() => navigation.navigate('Login')}>
-        <TextButton>Voltar</TextButton>
       </BtnLogin>
     </Container>
   )

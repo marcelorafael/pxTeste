@@ -37,6 +37,19 @@ align-items: center;
 margin-bottom: 5px;
 `;
 
+export const BtnSignUp = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.7
+})`
+width: 90%;
+border-radius: 5px;
+padding: 5px;
+background-color: transparent;
+
+align-items: center;
+
+margin-bottom: 5px;
+`;
+
 export const TextButton = styled.Text`
 ${({ theme }) => theme?.FONTS?.robotoThin ?? {}}
 color: ${({ theme }) => theme?.COLORS?.black ?? '#000'};

@@ -14,17 +14,15 @@ function AuthProvider({ children }) {
     async function loadStorage() {
       const storageUser = await AsyncStorage.getItem('Auth_user');
 
-      if (storageUser) {
-        setUser(JSON.parse(storageUser));
-        setLoading(false);
-      }
+           if(storageUser){
+               setUser(JSON.parse(storageUser));
+               setLoading(false);
+           }
 
-      setLoading(false);
-
-      console.log(storageUser)
-    }
-
-    loadStorage();
+           setLoading(false);
+       }
+       
+       loadStorage();
 
   }, []);
 
@@ -37,13 +35,11 @@ function AuthProvider({ children }) {
 
     if(!data) {
       setLoadingAuth(false);
-      return;
-    } else {
+    } 
       setUser(data);
       setLoadingAuth(false);
       setLoading(false)
       storageUser(data)
-    }
   }
 
   // signUp
@@ -58,19 +54,22 @@ function AuthProvider({ children }) {
     } else {
       setUser(data);
       setLoadingAuth(false);
+      storageUser(data)
     }
     
   }
 
   // storageUser
-  async function storageUser(data) {
+  async function storageUser(data){
     await AsyncStorage.setItem('Auth_user', JSON.stringify(data));
-  }
+}
 
   // signOut
   async function signOut() {
     signOutAuth()
-    setUser(null)
+    await AsyncStorage.clear().then(() => {
+      setUser(null)
+    })
     setLoadingAuth(false);
   }
 

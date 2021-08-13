@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Container, Title, Input, BtnLogin, TextButton } from './Login.styles'
+import { Container, Title, Input, BtnLogin, TextButton, BtnSignUp } from './Login.styles'
 import { AuthContext } from '../../../contexts/auth';
 
 const Login: React.FC = ({ navigation }: any) => {
@@ -36,9 +36,9 @@ const Login: React.FC = ({ navigation }: any) => {
         <TextButton>{loading ? 'Carregando...' :'Entrar'}</TextButton>
       </BtnLogin>
 
-      <BtnLogin onPress={() => navigation.navigate('SignUp')}>
-        <TextButton>Cadastrar</TextButton>
-      </BtnLogin>
+      <BtnSignUp onPress={() => navigation.navigate('SignUp')}>
+        <TextButton style={{color:'#FFF'}}>Cadastrar</TextButton>
+      </BtnSignUp>
     </Container>
   )
 }

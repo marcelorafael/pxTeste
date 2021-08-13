@@ -2566,7 +2566,7 @@
 
 "@storybook/addon-ondevice-actions@^5.3.23":
   version "5.3.23"
-  resolved "https://registry.npmjs.org/@storybook/addon-ondevice-actions/-/addon-ondevice-actions-5.3.23.tgz"
+  resolved "https://registry.npmjs.org/@storybook/addon-ondevice-actions/-/addon-ondevice-actions-5.3.23.tgz#0c7c7403cb7c6cb30e492b83b0e9d616f02c4b12"
   integrity sha512-GntACUPYGSh2d5fWIFMO6iXuGLKaJPVXNb5EsAJRj6UaIjeq0yWQNANowBbv0yXjJwooHiIITTNcYSzh/1AvWg==
   dependencies:
     "@storybook/addons" "5.3.21"
